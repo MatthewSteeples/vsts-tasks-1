@@ -141,7 +141,17 @@
             "helpMarkDown": "Criteria which defines when to pass the task. No criteria means response content does not influence the result. Example:- For response {\"status\" : \"successful\"}, the expression can be eq(root['status'], 'successful'). [More information](https://go.microsoft.com/fwlink/?linkid=842996)​",
             "groupName": "completionOptions",
             "visibleRule": "waitForCompletion = false"
-        }
+        },
+        {
+            "name": "requestTimeout",
+            "type": "string",
+            "label": "Amount of time to wait before timing out",
+            "defaultValue": "20",
+            "required": false,
+            "helpMarkDown": "Specify the timeout (sec)",
+            "groupName": "completionOptions",
+            "visibleRule": "waitForCompletion = false"
+        },
     ],
     "execution": {
         "HttpRequest": {
